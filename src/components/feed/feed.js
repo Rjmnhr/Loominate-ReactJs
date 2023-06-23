@@ -1,25 +1,19 @@
 import React from "react";
-import { Dropdown, Space, Button } from "antd";
+import { Dropdown, Space } from "antd";
 import {
   CommentOutlined,
   DislikeFilled,
   LikeFilled,
-  PlusOutlined,
   SendOutlined,
   DownOutlined,
 } from "@ant-design/icons";
 import { Items } from "../items/item";
+import AddPostModal from "../modals/add-post/add-post";
 
 const Feed = () => {
   return (
     <div>
-      <a className="post-bar" href="/">
-        <p>Post Something...</p>
-
-        <Button type="primary" shape="circle">
-          <PlusOutlined />
-        </Button>
-      </a>
+      <AddPostModal />
       <div className="filter-bar">
         <div className="filter-sub-list">
           <p>All</p>
@@ -33,7 +27,7 @@ const Feed = () => {
             }}
             trigger={["click"]}
           >
-            <a href="/" onClick={(e) => e.preventDefault()}>
+            <a href="#" onClick={(e) => e.preventDefault()}>
               <Space>
                 Click me
                 <DownOutlined />
